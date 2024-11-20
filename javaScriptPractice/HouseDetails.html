@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Details</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const house = { sqft: 800, bdRooms: 2, bthRooms: 2 };
+      let houseDetails = "<h2>Information about this house</h2>";
+      for (let i in house) {
+        houseDetails = `${houseDetails}<br>${i}:${house[i]}<br>`;
+        document.getElementById("root").innerHTML = houseDetails;
+      }
+    </script>
+  </body>
+</html>

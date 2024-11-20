@@ -7,6 +7,7 @@
   </head>
   <body>
     <div id="message"></div>
+    //Prepare the canvas
     <script>
       const dt = new Date();
       const month = dt.getMonth();
@@ -25,10 +26,11 @@
           msg = "April 26 is national Spinach Day!";
           break;
         default:
-          msg = "No Holidays this month, BAHHAHAAAHAAAAA";
+          msg = "No Holidays this month, BAHHAHAAAHA";
       }
-      const el = document.getElementById("message");
-      el.innerHTML = msg;
+      const el = document.getElementById("message"); //Bridge between HTML canvas
+      //and JavaSript, conversion is JavaScript firendly
+      el.innerHTML = msg; //Fill the canvas
     </script>
   </body>
 </html>
