@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sokete Survey</title>
+    <style>
+      .classbutton {
+        color: blue;
+        box-shadow: inset;
+        text-transform: uppercase;
+        border-style: groove;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>What do You think about Sokete?</h1>
+    <h4>Click on the answer You find the most accurate</h4>
+    <p><button id="funniest" class="classbutton">He is the funniest</button></p>
+    <p><button id="coolest" class="classbutton">He is the coolest</button></p>
+    <p><button id="strongest" class="classbutton">He is so strong</button></p>
+    <p><button id="idk" class="classbutton">Not sure</button></p>
+    <p><button id="notlike" class="classbutton">We don't like him</button></p>
+  </body>
+  <script>
+    const funniest = document.getElementById("funniest");
+    const coolest = document.getElementById("coolest");
+    const strong = document.getElementById("strongest");
+    const idk = document.getElementById("idk");
+    const notlike = document.getElementById("notlike");
+
+    funniest.addEventListener("click", () => alert("He is the funniest"));
+    coolest.addEventListener("click", () => alert("He is the coolest"));
+    strong.addEventListener("click", () => alert("He is pretty strong"));
+
+    idk.addEventListener("mouseover", () => {
+      idk.disabled = true;
+    });
+
+    idk.addEventListener("mouseout", () => {
+      idk.disabled = false;
+    });
+    notlike.addEventListener("click", () => {
+      alert('Thank You for "He is the funniest" answer!');
+    });
+  </script>
+</html>

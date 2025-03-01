@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="test - text" type="text" value="This is a test" />
+    <script>
+      const focusEvent = new Event("focus");
+      const testInput = document.getElementById("test - text");
+      testInput.addEventListener("focus", (e) => {
+        console.log(`${e.target.value}`);
+        console.log(`The active element is: ${document.activeElement.id}`);
+      });
+      testInput.dispatchEvent(focusEvent);
+    </script>
+  </body>
+</html>
